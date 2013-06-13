@@ -33,7 +33,7 @@ _root:
 
 posts:
   sort: ["date", "desc"]
-  permalink: "/:categories/:title/"
+  permalink: "/posts/:title/"
   summary_lines: 20
   latest: 5
   rss:
@@ -83,7 +83,7 @@ widgets :
     use : disqus
     enable : true
     # -- config for disqus --
-    short_name : jekyllbootstrap # Change This!
+    short_name : estimate # Change This!
 
     # -- config for livefyre --
     # site_id : 123

@@ -16,12 +16,12 @@
   position:relative;
   padding-top:10px;
   padding-bottom:25px;
-  font-family:"Myriad Pro";
+  font-family:'Lucida Grande', 'Palatino', 'Myriad Pro';
 }
 .post > h3.title span.date { 
   position:absolute;
   right:0;
-  font-family:"Myriad Pro";
+  font-family:'Lucida Grande', 'Palatino', 'Myriad Pro';
   font-size:0.9em;
 }
 .post > .more {
