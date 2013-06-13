@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Jennifer Lee</title>
+    <link>http://sample.com</link>
+    <pubDate>2013-06-13 09:22:51 -0400</pubDate>
+    <item>
+      <title>Starting Anew</title>
+      <link>http://sample.com/posts/starting-anew</link>
+      <pubDate>2013-05-30</pubDate>
+      <description>&lt;p&gt;It has been three years since I started &lt;a href="http://lessvariance.herokuapp.com/"&gt;my first static blog&lt;/a&gt;. As the &lt;a href="http://ruhoh.com/"&gt;Ruhoh&lt;/a&gt; blogging platform is very similar to &lt;a href="https://github.com/mojombo/jekyll"&gt;Jekyll&lt;/a&gt; and also using Markdown, I decided to give it a try after getting used to git and the mechanisms of generating posts.&lt;/p&gt;
+
+&lt;p&gt;Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. For further customization, we can always go deeper to the source, i.e., on my machine, the ruby gem is located at &lt;code&gt;usr/local/lib/ruby/gems/1.9.1/gems/ruhoh-2.1&lt;/code&gt; - symlinked from &lt;code&gt;usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/gems/1.9.1/gems/ruhoh-2.1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have enjoyed the simplicity of Ruhoh so far. It will allow me to maintain this blog easily and focus on the contents rather than other technicalities. Having said that, I&amp;#39;m delighted to start fresh with a new blog here.&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
