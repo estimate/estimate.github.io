@@ -2,9 +2,9 @@ This repository contains the source files for my Ruhoh [blog](http://estimate.gi
 
 ### Components
 
-- *main.css* stylesheet overrides the default [Twitter Bootstrap] theme: *bootstrap.min.css and style.css*. 
+- *main.css* stylesheet overrides the default [Twitter Bootstrap](http://twitter.github.io/bootstrap/) theme: *bootstrap.min.css* and *style.css*. 
 
-- The header image is borrowed from the [Pachyderm theme for wordpress.com](http://carolinethemes.com/2013/03/21/pachyderm-on-wp-com/). License: GNU GENERAL PUBLIC LICENSE.
+- The header image is borrowed from the [Pachyderm theme for wordpress.com](http://carolinethemes.com/2013/03/21/pachyderm-on-wp-com/) with the GNU GENERAL PUBLIC LICENSE.
 
 - Social icons by [Symbolset](http://blog.symbolset.com/using-multiple-sets/).
 
