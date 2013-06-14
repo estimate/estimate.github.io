@@ -2,11 +2,11 @@
 <rss version="2.0">
   <channel>
     <title>Jennifer Lee</title>
-    <link>http://sample.com</link>
-    <pubDate>2013-06-13 19:56:44 -0400</pubDate>
+    <link>http://estimate.github.io</link>
+    <pubDate>2013-06-13 23:37:09 -0400</pubDate>
     <item>
       <title>Starting Anew</title>
-      <link>http://sample.com/posts/starting-anew</link>
+      <link>http://estimate.github.io/posts/starting-anew</link>
       <pubDate>2013-05-30</pubDate>
       <description>&lt;p&gt;It has been three years since I started &lt;a href="http://lessvariance.herokuapp.com/"&gt;my first static blog&lt;/a&gt;. As the &lt;a href="http://ruhoh.com/"&gt;Ruhoh&lt;/a&gt; blogging platform is very similar to &lt;a href="https://github.com/mojombo/jekyll"&gt;Jekyll&lt;/a&gt; and also using Markdown, I decided to give it a try after getting used to git and the mechanisms of generating posts.&lt;/p&gt;
 
