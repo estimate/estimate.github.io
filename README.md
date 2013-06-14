@@ -14,7 +14,7 @@ This repository contains the source files for my Ruhoh [blog](http://estimate.gi
 
 - `bundle exec rackup -p 9292` for testing on local machine.
 
-- `ruhoh compile` -- resulting in `compiled/` directory that gets pushed to [estimate.github.io](https://github.com/estimate/estimate.github.io) respository on which a Github page lives.
+- `ruhoh compile` -- resulting in `compiled/` directory that gets pushed to the master branch of [estimate.github.io](https://github.com/estimate/estimate.github.io) respository on which a Github page lives.
 
 In addition to the following basic instructions from Ruhoh, here is a nice [write-up](http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html) on how to set up a Ruhoh blog and host it on Github Pages.
 
