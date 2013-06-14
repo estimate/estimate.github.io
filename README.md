@@ -1,3 +1,25 @@
+This repository contains the source files for my Ruhoh [blog](http://estimate.github.io/), hosted on Github Pages.
+
+### Components
+
+- *main.css* stylesheet overrides the default [Twitter Bootstrap] theme: *bootstrap.min.css and style.css*. 
+
+- The header image is borrowed from the [Pachyderm theme for wordpress.com](http://carolinethemes.com/2013/03/21/pachyderm-on-wp-com/). License: GNU GENERAL PUBLIC LICENSE.
+
+- Social icons by [Symbolset](http://blog.symbolset.com/using-multiple-sets/).
+
+- Modify *data.yml* and *config.yml* for high level individual customization.
+
+### Frequently Used 
+
+- `bundle exec rackup -p 9292` for testing on local machine.
+
+- `ruhoh compile` -- resulting in `compiled/` directory that gets pushed to [estimate.github.io](https://github.com/estimate/estimate.github.io) respository on which a Github page lives.
+
+In addition to the following basic instructions from Ruhoh, here is a nice [write-up](http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html) on how to set up a Ruhoh blog and host it on Github Pages.
+
+---
+
 **This version is for [ruhohSpec v2.1](http://ruhoh.com/docs/2) and is only compatible with ruhoh 2.1.x**
 
 A default blog scaffold for **ruhoh** compatible static blog parsers.
