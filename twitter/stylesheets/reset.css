@@ -3,9 +3,8 @@
    License: none (public domain)
 */
 
-html, body, applet, object, iframe, 
-blockquote, pre,
-a, abbr, acronym, address, big, cite,
+html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -19,7 +18,8 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit
+    font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
