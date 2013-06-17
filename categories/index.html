@@ -16,16 +16,21 @@
 <link href='/assets/stylesheets/style-33b16595ce1c5dd3b67b56919fd327c8.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
     <!-- Le fav and touch icons -->
-  <!-- Update these with your own images-->
-  <link rel="stylesheet" href="/assets/fonts/ss-social-regular.css">
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
   </head>
 
   <body>
 
-   <header id="site_header">
-      <div class="constrainer">
-        <h1><a href="/">Jennifer Lee</a></h1>
-          <nav>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Jennifer Lee</a>
+          <ul class="nav">
               
                 <li><a href="/archive">Archive</a></li>
               
@@ -35,9 +40,10 @@
                 <li class="active"><a href="/categories" class="active">Categories</a></li>
               
               
-          </nav>
+          </ul>
+        </div>
       </div>
-    </header>
+    </div>
 
     <div class="container-narrow">
 
@@ -58,23 +64,14 @@
       </div>
 
       <hr>
+      <div class="footer">
+        <p>&copy; Jennifer Lee 2013
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </div>
 
     </div> <!-- /container -->
-
-  <footer id="site_footer">
-    <div class="constrainer">
-      <ul class="social_links">
-        <li><a href="http://twitter.com/jliyi" target="_blank" class="ss-twitter"><span class="tooltip">Twitter</span></a></li>
-        <li><a href="http://gaussianmixture.tumblr.com" target="_blank" class="ss-tumblr"><span class="tooltip">Tumblr</span></a></li>
-        <li><a href="https://github.com/estimate/estimate.github.io/tree/blog" target="_blank" class="ss-octocat"><span class="tooltip">Fork</span></a></li>
-        <li><a href="https://plus.google.com/105832633459216628536/about?partnerid=gplp0" target="_blank" class="ss-googleplus"><span class="tooltip">Google, Gmail</span></a></li>
-        <li><a href="/posts/rss.xml" target="_blank" class="ss-rss"><span class="tooltip">RSS</span></a></li>
-      </ul>
-
-      <p>with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
-      and <a href="http://carolinethemes.com/2013/03/21/pachyderm-on-wp-com/" target="_blank">Pachyderm.</a></p>
-    </div>
-  </footer>
 
     <!-- Google Prettify -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
@@ -93,6 +90,6 @@
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
-  
+    
   </body>
 </html>
