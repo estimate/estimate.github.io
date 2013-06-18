@@ -1,7 +1,7 @@
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 820px;
 }
 .container-narrow > hr {
   margin: 30px 0;
@@ -15,15 +15,20 @@
 .post > h3.title {
   position:relative;
   padding-top:10px;
+  padding-bottom:25px;
+  font-family:'Lucida Grande', 'Palatino', 'Myriad Pro';
 }
 .post > h3.title span.date { 
   position:absolute;
   right:0;
+  font-family:'Lucida Grande', 'Palatino', 'Myriad Pro';
   font-size:0.9em;
 }
 .post > .more {
   margin:10px 0;
   text-align:left;
+  font-family:"HelveticaNeue-Light";
+  font-size:20px;
 }
 
 /* post-full*/
