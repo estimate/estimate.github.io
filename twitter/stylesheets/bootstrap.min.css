@@ -803,7 +803,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .input-prepend input,.input-append input,.input-prepend input[class*="span"],.input-append input[class*="span"]{display:inline-block;width:auto;} 
 .controls-row [class*="span"]+[class*="span"]{margin-left:0;} 
 .modal{position:fixed;top:20px;left:20px;right:20px;width:auto;margin:0;}
-.modal.fade{top:-100px;} .modal.fade.in{top:20px;}}
+.modal.fade{top:-100px;} .modal.fade.in{top:20px;}}*/
 
 @media (max-width:480px){.nav-collapse{-webkit-transform:translate3d(0, 0, 0);} 
 .page-header h1 small{display:block;line-height:20px;} 
@@ -812,7 +812,7 @@ input[type="checkbox"],input[type="radio"]{border:1px solid #ccc;}
 .form-horizontal .controls{margin-left:0;} .form-horizontal .control-list{padding-top:0;} .form-horizontal .form-actions{padding-left:10px;padding-right:10px;} 
 .media .pull-left,.media .pull-right{float:none;display:block;margin-bottom:10px;} 
 .media-object{margin-right:0;margin-left:0;} 
-.modal{top:10px;left:10px;right:10px;} .modal-header .close{padding:10px;margin:-10px;} .carousel-caption{position:static;}}*/
+.modal{top:10px;left:10px;right:10px;} .modal-header .close{padding:10px;margin:-10px;} .carousel-caption{position:static;}}
 
 @media (min-width:768px) and (max-width:979px){.row{margin-left:-20px;*zoom:1;}
 .row:before,.row:after{display:table;content:"";line-height:0;} 
