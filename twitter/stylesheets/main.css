@@ -6,8 +6,7 @@
 
 .tooltip:after{position:absolute;display:block;bottom:-16px;left:50%;margin-left:-8px;content:'';border:8px solid transparent;border-top-color:#322f36}
 
-body{
-	color:#6d717d;font-size:26px;line-height:1.8;font-family:'Palatino', 'Open Sans', sans-serif;background-color:#fef8cd;-webkit-text-size-adjust:none}::selection{background:#8adde5}::-moz-selection{background:#8adde5}
+body{color:#6d717d;font-size:26px;line-height:1.8;font-family:'Palatino', 'Open Sans', sans-serif;background-color:#fef8cd;-webkit-text-size-adjust:none}::selection{background:#8adde5}::-moz-selection{background:#8adde5}
 
 a{color:#9c0001;text-decoration:none;}
 
@@ -66,7 +65,7 @@ h3{font-size:1.5em}
 @media screen and (max-width: 1000px){
 	.constrainer{padding:0 30px;width:auto}}
 
-@media screen and (max-width: 740px){
+@media screen and (max-width: 960px){
 	h1{font-size:2.2em}
 	h2{font-size:2em}
 	h3{font-size:1.3em}
