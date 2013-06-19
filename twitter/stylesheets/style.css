@@ -74,6 +74,7 @@
   color:#FFF;
 }
 
+/* For iPod Touch/iPhone 5 */
 @media screen and (max-width: 1000px) {
   .container-narrow{padding-left:20px;padding-right:20px;}
 }
