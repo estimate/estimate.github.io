@@ -7,10 +7,12 @@
 
 	<!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>Your Page Title Here :)</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  {{# page.description }}
+    <meta name="description" content="{{ . }}">
+  {{/ page.description }}
+  <meta name="author" content="{{ data.author.name }}">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
