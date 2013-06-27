@@ -2,13 +2,13 @@ This repository contains the source files for my Ruhoh [blog](http://estimate.gi
 
 ### Components
 
-- *main.css* stylesheet overrides the default [Twitter Bootstrap](http://twitter.github.io/bootstrap/) theme: *bootstrap.min.css* and *style.css*. 
+- `main.css, style.css, and skeleton.css` customized stylesheets override the default [Twitter Bootstrap](http://twitter.github.io/bootstrap/) theme: `bootstrap.min.css`.
 
-- The header image is borrowed from the [Pachyderm theme for wordpress.com](http://carolinethemes.com/2013/03/21/pachyderm-on-wp-com/) with the GNU GENERAL PUBLIC LICENSE.
+- [Skeleton](http://www.getskeleton.com/) helps provide the boilerplate grid system for mobile responsive design.
 
 - Social icons by [Symbolset](http://blog.symbolset.com/using-multiple-sets/).
 
-- Modify *data.yml* and *config.yml* for high level individual customization.
+- Modify `data.yml` and `config.yml` for high level individual customization.
 
 ### Frequently Used 
 
