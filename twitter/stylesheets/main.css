@@ -33,20 +33,20 @@ h3{font-size:1.5em}
 
 #site_header nav{float:right;font-size:20px;font-family:'HelveticaNeue-Light'}
 
-#site_header nav li{display:inline-block}
+#site_header nav li{display:inline-block;zoom:1;*display:inline-block;padding-right:30px}
 
-#site_header nav li.active a{background-color:#E6E6FA}
+#site_header nav li a{text-decoration:none;color:#fff}
 
-#site_header nav li a{padding:0 22px;color:#a7a3ae}
+#site_header nav li a:hover{border-bottom:5px #fff solid}
 
-#site_header nav li a:hover{background-color:#CDC9C9}
+#site_header nav li.active a{border-bottom:5px #fff solid}
 
 
 #site_footer{padding:35px 0;background-color:#8B8386;border-top:10px solid #fff;color:#EEEEE0;font-size:20px;font-family:'HelveticaNeue-Light'}
 
 #site_footer a{color:#EEEEE0;text-decoration:none;}
 
-#site_footer a:hover{color:#F5DEB3}
+#site_footer a:hover{border-bottom:2px #e74c3c solid;color:#F5DEB3}
 
 #site_footer .social_links{float:right}
 
