@@ -14,21 +14,20 @@
 /* posts index */
 .post > h3.title {
   position:relative;
-  padding-top:10px;
-  padding-bottom:25px;
-  font-family:'Lucida Grande', 'Palatino', 'Myriad Pro';
+  padding-bottom:10px;
+  font-family:'Palatino', 'Myriad Pro';
 }
 .post > h3.title span.date { 
   position:absolute;
   right:0;
-  font-family:'Lucida Grande', 'Palatino', 'Myriad Pro';
+  font-family:'Palatino', 'Myriad Pro';
   font-size:0.9em;
 }
 .post > .more {
   margin:10px 0;
   text-align:left;
   font-family:"HelveticaNeue-Light";
-  font-size:20px;
+  font-size:25px;
 }
 
 /* post-full*/
