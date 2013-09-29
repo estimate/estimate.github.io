@@ -8,7 +8,8 @@
 	<!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Categories</title>
+  <title>Numerical Differentiation</title>
+    <meta name="description" content="Test mathjax plugin">
   <meta name="author" content="Jennifer Lee">
 
 	<!-- Mobile Specific Metas
@@ -55,26 +56,79 @@
               
                 <li><a href="/tags">Tags</a></li>
               
-                <li class="active"><a href="/categories" class="active">Categories</a></li>
               
+                <li><a href="/categories">Categories</a></li>
               
           </nav>
     </aside>
 		
     <div id="content" class="eleven columns offset-by-one omega">
       <!--p style="text-align:center"><a href="/"><img src="/assets/media/zoo2.png" alt="Estimators and Convergence" style="padding:10px;" /></a></p-->
-			<div class="page-header">
-  <h1>Categories </h1>
+			
+<div class="page-header">
+  <h1>Numerical Differentiation </h1>
 </div>
 
-<div class="row-fluid">
+<div class="row-fluid post-full">
   <div class="span12">
-    <ul class="tag_box inline">
-</ul>
+    <div class="date">
+      <span>2013-09-29</strong>
+    </div>
+    <div class="content">
+      <h2 id="toc_0">Derivative of a real function</h2>
 
+<p>The derivative of <code>$f(x)$</code> is</p>
+
+<pre><code class="mathjax">\begin{equation}
+f&#39;(x) = \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \label{eq:DerivativeDef}
+\end{equation}
+</code></pre>
+
+<p>suggest a naive approach to compute a numerical derivative: pick a small value <code>$h$</code> and apply \eqref{eq:DerivativeDef}. However, applied uncritically, this procedure is almost guaranteed to produce inaccurate results.</p>
+
+<p><a href="#Ridders">Ridders</a> applied Romberg&#39;s method to improve the accuracy in the computation of the first and second derivatives of a real function. Using the Taylor expansion in the vicinity of <code>$x$</code>:</p>
+
+<p>$$
+f&#39;(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+$$</p>
+
+<p>with a truncation error of <code>$e_t \sim h^2 f^{(3)}$</code>. As a consequence, <code>$e_t$</code> decreases quadratically with decreasing <code>$h$</code>.</p>
+
+    </div>
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+    </ul>
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+    </ul>
+    <hr>
+    <div class="pagination">
+      <ul>
+          <li class="prev"><a href="/posts/starting-anew" title="Starting Anew">&larr; Previous</a></li>
+
+          <li><a href="/archive">Archive</a></li>
+
+          <li class="next disabled"><a>Next &rarr;</a>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'estimate'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
   </div>
 </div>
+
 
 		</div>
 
