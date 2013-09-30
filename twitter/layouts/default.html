@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  {{# page.description }}
+    <meta name="description" content="{{ . }}">
+  {{/ page.description }}
+  <meta name="author" content="{{ data.author.name }}">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+ 	{{# stylesheets.load }}
+ 	  bootstrap.min.css
+ 	  style.css
+ 	  google_prettify/sons-of-obsidian.css
+ 	  main.css
+    skeleton.css
+	{{/ stylesheets.load }}
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== 
+  <!-- Le fav and touch icons -->
+  <!-- Update these with your own images-->
+  <link rel="stylesheet" href="/assets/media/ss-social-regular.css">
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+  <header id="site_header">
+  </header>
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container">
+    <aside id="sidebar" class="four columns">
+      <h1><a href="{{urls.base_path}}">{{ data.title }}</a></h1>
+          <nav>
+            {{# data.navigation?to__root }}
+              {{> pages_list }}
+            {{/ data.navigation?to__root }}
+          </nav>
+    </aside>
+		
+    <div id="content" class="tweleve columns">
+      <!--p style="text-align:center"><a href="/"><img src="/assets/media/zoo2.png" alt="Estimators and Convergence" style="padding:10px;" /></a></p-->
+			{{{ content }}}
+		</div>
+
+	</div><!-- container -->
+
+	<footer id="site_footer">
+    <div class="constrainer">
+      <ul class="social_links">
+        <li><a href="http://twitter.com/jliyi" target="_blank" class="ss-twitter"><span class="tooltip">Twitter</span></a></li>
+        <li><a href="http://gaussianmixture.tumblr.com" target="_blank" class="ss-tumblr"><span class="tooltip">Tumblr</span></a></li>
+        <li><a href="https://github.com/estimate/estimate.github.io/tree/blog" target="_blank" class="ss-octocat"><span class="tooltip">Fork</span></a></li>
+        <li><a href="https://plus.google.com/105832633459216628536/about?partnerid=gplp0" target="_blank" class="ss-googleplus"><span class="tooltip">Google, Gmail</span></a></li>
+        <li><a href="mailto:jennifer_io@yahoo.com" target="_blank" class="ss-mail"><span class="tooltip">Contact</span></a></li>
+       	<li><a href="/posts/rss.xml" target="_blank" class="ss-rss"><span class="tooltip">RSS</span></a></li>
+      </ul>
+
+      <p>made with <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
+      and <a href="http://www.getskeleton.com/" target="_blank">Skeleton.</a></p>
+    </div>
+  </footer>
+
+    {{{ widgets.google_prettify }}}
+    {{{ widgets.analytics }}}
+  
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
