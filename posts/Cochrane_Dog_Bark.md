@@ -115,7 +115,7 @@ $$ r_{t+1} = a_r + b_r (d_t - p_t) + \epsilon^r_{t+1} $$
 $$ \Delta d_{t+1} = a_d + b_d (d_t - p_t) + \epsilon^d_{t+1} $$
 $$ (d_{t+1} - p_{t+1}) = a_{dp} + \phi (d_t - p_t) + \epsilon^{dp}_{t+1} $$
 
-$b_r$ and $b_d$ are the regression coefficients we estimated before, $\phi$ is the dividend-yield autocorrelation.
+$$b_r$$ and $b_d$ are the regression coefficients we estimated before, $\phi$ is the dividend-yield autocorrelation.
 
 Also, the Campbell-Shiller (1988) linearization gives us an approximate identity for log returns subject to dividend growth and price-dividend ratios:
 
