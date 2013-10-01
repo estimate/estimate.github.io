@@ -17,10 +17,10 @@
 
 	<!-- CSS
   ================================================== -->
-<link href='/assets/stylesheets/bootstrap.min-5fb7ee3d384c31ad81a26730e8174878.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/assets/stylesheets/style-a7001e03ee8408de07db92e372f950c4.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/bootstrap.min-a37f2f9fb112c81fc297f07ea625f664.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/style-bcf3ea2afa67c840a9ff8734d886ea68.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/assets/stylesheets/main-ffe437d31af958dd826db533f04a8c2e.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/main-d1a98de9851bbc32eff72615e9c79169.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/skeleton-92d82888994cb6fa48364c88b72d725a.css' type='text/css' rel='stylesheet' media='all'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,8 +34,6 @@
 
 </head>
 <body>
-
-
 
 	<!-- Primary Page Layout
 	================================================== -->
@@ -98,18 +96,77 @@ $$</p>
   </div>
 </div>
 <div class="post">
-  <h3 class="title"><a href="/posts/starting-anew">Starting Anew</a> <span class="date">2013-06-15</span></h3>
+  <h3 class="title"><a href="/posts/blogging-with-ruhoh">Blogging with Ruhoh</a> <span class="date">2013-06-15</span></h3>
 
-  <div class="summary">
-<p>It has been three years since I started <a href="http://lessvariance.herokuapp.com/">my first static blog</a>. As the <a href="http://ruhoh.com/">Ruhoh</a> blogging platform is very similar to <a href="https://github.com/mojombo/jekyll">Jekyll</a> and also using Markdown, I decided to give it a try after getting used to git and the mechanisms of generating posts.</p>
+  <div class="summary ellipsis">
+<p>It has been three years since I started <a href="http://lessvariance.herokuapp.com/">my first static blog</a>. My apology for the lack of postings. It has been a long difficult journey with no sight of the tide turning. I can only say that I failed to get my priorities straight. As the <code>ruhoh</code> blogging platform is very similar to <code>jekyll</code>, I decided to give it a try. I'm also fond of using <code>markdown</code> formatted text given its flexibility, and static blogs generally support that. From now on, I'm going to start fresh here.</p>
 
-<p>Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. For further customization, we can always go deeper to the source, i.e., on my machine, the ruby gem is located at <code>usr/local/lib/ruby/gems/1.9.1/gems/ruhoh-2.1</code> - symlinked from <code>usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/gems/1.9.1/gems/ruhoh-2.1</code>.</p>
+<p>Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I'm using <code>ruhoh version 2.1</code>. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent <a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html">writeup</a>. Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.</p>
 
-<p>I have enjoyed the simplicity of Ruhoh so far. Jekyll is as good and there's almost no difference in the number of steps to publish a post. I was just eager to tinker with a different static blog generator. Having said that, I'm delighted to start fresh with a new blog here. I added a few details on how I set up this blog with Ruhoh in this <a href="https://github.com/estimate/estimate.github.io/tree/blog">README</a> on Github.</p>
+<p>To get started, clone the blog scaffold from this <a href="https://github.com/ruhoh/blog">github repository</a>. </p>
+
+<pre><code>$ git clone git://github.com/ruhoh/blog.git blog
+</code></pre>
+
+<p>To enable adding our own contents later on, we'll need to remove the reference to the Ruhoh origin before pointing it to our own. Assuming we have already set up a github repository with <code>USERNAME/ruhoh-blog.git</code>, and the blog directory on the local machine has its name set to <code>username.github.io</code>, we do:</p>
+
+<pre><code>$ git remote rm origin
+$ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
+</code></pre>
+
+<p>Make sure we have at least <code>ruby 1.9.2+</code> and check if bundler exists: <code>$ bundle -v</code>. Bundler is used to manage different versions of Ruhoh. If the bundler is not found, install it using <code>$ gem install bundler</code>. Inside the working blog directory, install the Ruhoh gem using bundler. </p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>Once the bundle is installed, we may run the blog in <em>preview</em> mode. Run in the terminal:</p>
 </div>
 
   <div class="more">
-    <a href="/posts/starting-anew" class="btn btn-small">read more..</a>
+    <a href="/posts/blogging-with-ruhoh" class="btn btn-small">read more..</a>
+  </div>
+</div>
+<div class="post">
+  <h3 class="title"><a href="/posts/replicating-cochrane-2008">Replicating Cochrane (2008)</a> <span class="date">2013-02-09</span></h3>
+
+  <div class="summary ellipsis">
+<p>In this post, I want to replicate some results of Cochrane (2008), The Dog That Did Not Bark: A Defense of Return Predictability, Review of Financial Studies, 21 (4). You can find that paper on John Cochrane's <a href="http://faculty.chicagobooth.edu/john.cochrane/research/papers/cochrane%20dog%20that%20did%20not%20bark.pdf">website</a>. I wrote some thoughts about return predictability already on my <a href="http://christophj.github.com/replicating/r/replicating-goyal-welch-2008/">Goyal/Welch replication post</a>, so please check this one out for some more background. Or just read the papers, they explain it better than I could anyway.</p>
+
+<h2 id="toc_0">Replication of the forecasting regressions in Cochrane's Table 1</h2>
+
+<p>Let's first repeat the forecasting regressions Cochrane runs in Table 1 of his paper. He uses data in real terms, i.e. deflated by the CPI, and on an annual basis ranging from 1926 to 2004. I do not have access to CRSP, but fortunately, we find similar data on Robert Shiller's <a href="http://www.econ.yale.edu/%7Eshiller/data.htm">website</a>. His data is saved in an Excel-file and is formatted in such a way that you cannot just read it into R. So you manually have to delete unnecessary rows and save the sheet <em>Data</em> as a .CSV file. Also, here is the naming convention I apply for the relevant columns:</p>
+
+<ul>
+<li>
+<strong>RealR</strong>: Real One_Year Interest Rate (column H as of february 2013). Note that Cochrane uses real return on 3-month Treasury-Bills, but I'm to lazy to find that somewhere else and match it. </li>
+<li>
+<strong>RealP</strong>: RealP Stock Price (column P as of february 2013).</li>
+<li>
+<strong>RealD</strong>: RealD S&amp;P Dividend (column O as of february 2013).</li>
+<li>
+<strong>Ret_SP</strong>: Return on S&amp;P Composite (column P as of february 2013).</li>
+<li>
+<strong>Year</strong>: First column with the years.</li>
+</ul>
+<pre><code class="r">library(data.table)
+#CHANGE TO THE DIRECTORY IN WHICH YOU SAVED THE FILE
+strPath &lt;- "/home/christophj/Dropbox/R_Package_Development/vignettes_REM/Data/Robert_Shiller_Data_Formatted.csv"
+#strPath &lt;- "C:/Dropbox/R_Package_Development/vignettes_REM/Data/Robert_Shiller_Data_Formatted.csv"
+shiller_data &lt;- as.data.table(read.csv(strPath))
+strStart &lt;- 1924; strEnd &lt;- 2005
+#GET RELEVANT DATA
+shiller_data &lt;- shiller_data[, Dgrowth := c(NA, exp(diff(log(RealD))))]
+shiller_data &lt;- shiller_data[, DP := RealD/RealP]
+vec_Ret_SP &lt;- c(NA, shiller_data[2:nrow(shiller_data), RealP + RealD]/shiller_data[1:(nrow(shiller_data)-1), RealP ])
+shiller_data &lt;- shiller_data[, Ret_SP := vec_Ret_SP]
+shiller_data &lt;- shiller_data[, Ex_Ret_SP := Ret_SP - RealR]
+shiller_data &lt;- shiller_data[Year &gt;= strStart &amp; Year &lt;= strEnd, list(Ret_SP, Ex_Ret_SP, RealR, RealD, Dgrowth, DP)]
+summary(shiller_data)
+</code></pre>
+</div>
+
+  <div class="more">
+    <a href="/posts/replicating-cochrane-2008" class="btn btn-small">read more..</a>
   </div>
 </div>
 
@@ -137,7 +194,7 @@ $$</p>
       </ul>
 
       <p>made with <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
-      and <a href="http://www.getskeleton.com/" target="_blank">Skeleton.</a></p>
+      and <a href="http://www.getskeleton.com/" target="_blank" title="Boilerplate for Responsive, Mobile-Friendly Development">Skeleton.</a></p>
     </div>
   </footer>
 
@@ -167,7 +224,7 @@ $$</p>
 </script>
 
 
-  
+    
 
 
 <!-- End Document

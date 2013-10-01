@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Jennifer Lee</title>
+    <description>Jennifer Lee</description>
+    <link>http://estimate.github.io</link>
+    <pubDate>2013-10-01</pubDate>
+    <item>
+      <title>Another post</title>
+      <link>http://estimate.github.io/drafts/another-post</link>
+      <pubDate>2013-10-01</pubDate>
+      <description/>
+    </item>
+  </channel>
+</rss>
