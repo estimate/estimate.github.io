@@ -126,49 +126,6 @@ $ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
     <a href="/posts/blogging-with-ruhoh" class="btn btn-small">read more..</a>
   </div>
 </div>
-<div class="post">
-  <h3 class="title"><a href="/posts/replicating-cochrane-2008">Replicating Cochrane (2008)</a> <span class="date">2013-02-09</span></h3>
-
-  <div class="summary ellipsis">
-<p>In this post, I want to replicate some results of Cochrane (2008), The Dog That Did Not Bark: A Defense of Return Predictability, Review of Financial Studies, 21 (4). You can find that paper on John Cochrane's <a href="http://faculty.chicagobooth.edu/john.cochrane/research/papers/cochrane%20dog%20that%20did%20not%20bark.pdf">website</a>. I wrote some thoughts about return predictability already on my <a href="http://christophj.github.com/replicating/r/replicating-goyal-welch-2008/">Goyal/Welch replication post</a>, so please check this one out for some more background. Or just read the papers, they explain it better than I could anyway.</p>
-
-<h2 id="toc_0">Replication of the forecasting regressions in Cochrane's Table 1</h2>
-
-<p>Let's first repeat the forecasting regressions Cochrane runs in Table 1 of his paper. He uses data in real terms, i.e. deflated by the CPI, and on an annual basis ranging from 1926 to 2004. I do not have access to CRSP, but fortunately, we find similar data on Robert Shiller's <a href="http://www.econ.yale.edu/%7Eshiller/data.htm">website</a>. His data is saved in an Excel-file and is formatted in such a way that you cannot just read it into R. So you manually have to delete unnecessary rows and save the sheet <em>Data</em> as a .CSV file. Also, here is the naming convention I apply for the relevant columns:</p>
-
-<ul>
-<li>
-<strong>RealR</strong>: Real One_Year Interest Rate (column H as of february 2013). Note that Cochrane uses real return on 3-month Treasury-Bills, but I'm to lazy to find that somewhere else and match it. </li>
-<li>
-<strong>RealP</strong>: RealP Stock Price (column P as of february 2013).</li>
-<li>
-<strong>RealD</strong>: RealD S&amp;P Dividend (column O as of february 2013).</li>
-<li>
-<strong>Ret_SP</strong>: Return on S&amp;P Composite (column P as of february 2013).</li>
-<li>
-<strong>Year</strong>: First column with the years.</li>
-</ul>
-<pre><code class="r">library(data.table)
-#CHANGE TO THE DIRECTORY IN WHICH YOU SAVED THE FILE
-strPath &lt;- "/home/christophj/Dropbox/R_Package_Development/vignettes_REM/Data/Robert_Shiller_Data_Formatted.csv"
-#strPath &lt;- "C:/Dropbox/R_Package_Development/vignettes_REM/Data/Robert_Shiller_Data_Formatted.csv"
-shiller_data &lt;- as.data.table(read.csv(strPath))
-strStart &lt;- 1924; strEnd &lt;- 2005
-#GET RELEVANT DATA
-shiller_data &lt;- shiller_data[, Dgrowth := c(NA, exp(diff(log(RealD))))]
-shiller_data &lt;- shiller_data[, DP := RealD/RealP]
-vec_Ret_SP &lt;- c(NA, shiller_data[2:nrow(shiller_data), RealP + RealD]/shiller_data[1:(nrow(shiller_data)-1), RealP ])
-shiller_data &lt;- shiller_data[, Ret_SP := vec_Ret_SP]
-shiller_data &lt;- shiller_data[, Ex_Ret_SP := Ret_SP - RealR]
-shiller_data &lt;- shiller_data[Year &gt;= strStart &amp; Year &lt;= strEnd, list(Ret_SP, Ex_Ret_SP, RealR, RealD, Dgrowth, DP)]
-summary(shiller_data)
-</code></pre>
-</div>
-
-  <div class="more">
-    <a href="/posts/replicating-cochrane-2008" class="btn btn-small">read more..</a>
-  </div>
-</div>
 
 <div class="pagination">
   <ul>
