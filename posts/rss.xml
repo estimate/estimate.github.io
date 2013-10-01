@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Jennifer Lee</title>
+    <description>Jennifer Lee</description>
+    <link>http://estimate.github.io</link>
+    <pubDate>2013-10-01</pubDate>
+    <item>
+      <title>Numerical Differentiation</title>
+      <link>http://estimate.github.io/posts/numerical-differentiation</link>
+      <pubDate>2013-09-29</pubDate>
+      <description>Test mathjax plugin</description>
+    </item>
+    <item>
+      <title>Blogging with Ruhoh</title>
+      <link>http://estimate.github.io/posts/blogging-with-ruhoh</link>
+      <pubDate>2013-06-15</pubDate>
+      <description>Updated '2013-09-30'</description>
+    </item>
+  </channel>
+</rss>
