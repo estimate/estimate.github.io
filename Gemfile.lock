@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rubygems.org/
   specs:
     directory_watcher (1.4.1)
     mini_portile (0.5.1)
