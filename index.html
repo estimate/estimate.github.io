@@ -20,7 +20,7 @@
 <link href='/assets/stylesheets/bootstrap.min-a37f2f9fb112c81fc297f07ea625f664.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/style-bcf3ea2afa67c840a9ff8734d886ea68.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/assets/stylesheets/main-d1a98de9851bbc32eff72615e9c79169.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/main-4febf66b7c6b328d0fbb81a2337912c8.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/skeleton-92d82888994cb6fa48364c88b72d725a.css' type='text/css' rel='stylesheet' media='all'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -68,40 +68,12 @@
 <div class="row-fluid">
   <div class="span12">
     <div class="post">
-  <h3 class="title"><a href="/posts/numerical-differentiation">Numerical Differentiation</a> <span class="date">2013-09-29</span></h3>
-
-  <div class="summary">
-<h2 id="toc_0">Derivative of a real function</h2>
-
-<p>The derivative of <code>$f(x)$</code> is</p>
-
-<pre><code class="mathjax">\begin{equation}
-f'(x) = \lim_{h \rightarrow 0} \frac{f(x + h) - f(x)}{h} \label{eq:DerivativeDef}
-\end{equation}
-</code></pre>
-
-<p>suggest a naive approach to compute a numerical derivative: pick a small value <code>$h$</code> and apply \eqref{eq:DerivativeDef}. However, applied uncritically, this procedure is almost guaranteed to produce inaccurate results.</p>
-
-<p><a href="#Ridders">Ridders</a> applied Romberg's method to improve the accuracy in the computation of the first and second derivatives of a real function. Using the Taylor expansion in the vicinity of <code>$x$</code>:</p>
-
-<p>$$
-f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
-$$</p>
-
-<p>with a truncation error of <code>$e_t \sim h^2 f^{(3)}$</code>. As a consequence, <code>$e_t$</code> decreases quadratically with decreasing <code>$h$</code>.</p>
-</div>
-
-  <div class="more">
-    <a href="/posts/numerical-differentiation" class="btn btn-small">read more..</a>
-  </div>
-</div>
-<div class="post">
   <h3 class="title"><a href="/posts/blogging-with-ruhoh">Blogging with Ruhoh</a> <span class="date">2013-06-15</span></h3>
 
   <div class="summary ellipsis">
 <p>It has been three years since I started <a href="http://lessvariance.herokuapp.com/">my first static blog</a>. My apology for the lack of postings. It has been a long difficult journey with no sight of the tide turning. I can only say that I failed to get my priorities straight. As the <code>ruhoh</code> blogging platform is very similar to <code>jekyll</code>, I decided to give it a try. I'm also fond of using <code>markdown</code> formatted text given its flexibility, and static blogs generally support that. From now on, I'm going to start fresh here.</p>
 
-<p>Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I'm using <code>ruhoh version 2.1</code>. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent <a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html">writeup</a>. Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.</p>
+<p>Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent <a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html">writeup</a>. Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.</p>
 
 <p>To get started, clone the blog scaffold from this <a href="https://github.com/ruhoh/blog">github repository</a>. </p>
 
@@ -111,6 +83,7 @@ $$</p>
 <p>To enable adding our own contents later on, we'll need to remove the reference to the Ruhoh origin before pointing it to our own. Assuming we have already set up a github repository with <code>USERNAME/ruhoh-blog.git</code>, and the blog directory on the local machine has its name set to <code>username.github.io</code>, we do:</p>
 
 <pre><code>$ git remote rm origin
+
 $ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
 </code></pre>
 
@@ -119,7 +92,6 @@ $ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
 <pre><code>$ bundle install
 </code></pre>
 
-<p>Once the bundle is installed, we may run the blog in <em>preview</em> mode. Run in the terminal:</p>
 </div>
 
   <div class="more">
@@ -181,7 +153,23 @@ $ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
 </script>
 
 
-    
+    <!-- INSERT MATHJAX CONFIGURATION FROM MATH.STACKEXCHANGE -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script type="text/javascript"
+src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <!-- End Document
