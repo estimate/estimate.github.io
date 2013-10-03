@@ -108,6 +108,8 @@ a:hover,a:focus{color:#CD5555;border-bottom:1px solid #CD5555;-webkit-transition
 	#sidebar nav ul li a:active{color:#ff6c07;outline:0;} 
 	#sidebar nav ul li a:focus{outline:thin dotted;} 
 
+	body{-webkit-text-size-adjust:auto;}
+
 	#search{text-align:center;margin-bottom:20px;padding:0;}#search h5{margin-bottom:20px;} #search form{text-align:center;}#search form input{width:90%;} 
 
 	#elsewhere,#social{text-align:center;margin-bottom:20px;}
