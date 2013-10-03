@@ -169,7 +169,7 @@ $ echo &quot;*.lock&quot; &gt;&gt; .gitignore
 $ echo &quot;.DS_Store&quot; &gt;&gt; .gitignore
 
 # On Mac OS, there is this extra hidden file .DS_Store we would like to exclude
-$ find . _name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+$ find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
 
 $ git add .
 
