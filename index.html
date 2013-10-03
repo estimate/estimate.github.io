@@ -20,7 +20,7 @@
 <link href='/assets/stylesheets/bootstrap.min-a37f2f9fb112c81fc297f07ea625f664.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/style-bcf3ea2afa67c840a9ff8734d886ea68.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
-<link href='/assets/stylesheets/main-4febf66b7c6b328d0fbb81a2337912c8.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/main-282677fc3c506151600bab0426637fe2.css' type='text/css' rel='stylesheet' media='all'>
 <link href='/assets/stylesheets/skeleton-92d82888994cb6fa48364c88b72d725a.css' type='text/css' rel='stylesheet' media='all'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,14 +37,13 @@
 
 	<!-- Primary Page Layout
 	================================================== -->
-
+<div class="container">
   <header id="site_header">
   </header>
 
-	<!-- Delete everything in this .container and get started on your own site! -->
-
-	<div class="container">
-    <aside id="sidebar" class="four columns">
+	
+  <!-- Delete everything in this .container and get started on your own site! -->
+    <div id="sidebar" class="four columns alpha">
       <h1><a href="/">Jennifer Lee</a></h1>
           <nav>
               
@@ -57,9 +56,9 @@
                 <li><a href="/categories">Categories</a></li>
               
           </nav>
-    </aside>
+    </div>
 		
-    <div id="content" class="twelve columns">
+    <div id="content" class="twelve columns omega">
       <!--p style="text-align:center"><a href="/"><img src="/assets/media/zoo2.png" alt="Estimators and Convergence" style="padding:10px;" /></a></p-->
 			<div class="page-header">
   <h1>Home </h1>
@@ -109,11 +108,14 @@ $ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
 
 		</div>
 
-	</div><!-- container -->
+<div id="site_footer">
+  <div id="social" class="five columns alpha">
+    <h5>powered by <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
+      and <a href="http://pages.github.com/" target="_blank" title="Github Pages">Github Pages</a></h5>
+  </div>
 
-	<footer id="site_footer">
-    <div class="constrainer">
-      <ul class="social_links">
+	<div id="social" class="eleven columns omega">
+      <ul>
         <li><a href="http://twitter.com/jliyi" target="_blank" class="ss-twitter"><span class="tooltip">Twitter</span></a></li>
         <li><a href="http://gaussianmixture.tumblr.com" target="_blank" class="ss-tumblr"><span class="tooltip">Tumblr</span></a></li>
         <li><a href="https://github.com/estimate/estimate.github.io/tree/blog" target="_blank" class="ss-octocat"><span class="tooltip">Fork</span></a></li>
@@ -121,11 +123,10 @@ $ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
         <li><a href="mailto:jennifer_io@yahoo.com" target="_blank" class="ss-mail"><span class="tooltip">Contact</span></a></li>
        	<li><a href="/posts/rss.xml" target="_blank" class="ss-rss"><span class="tooltip">RSS</span></a></li>
       </ul>
+  </div>
+</div>
+</div><!--container-->
 
-      <p>made with <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
-      and <a href="http://www.getskeleton.com/" target="_blank" title="Boilerplate for Responsive, Mobile-Friendly Development">Skeleton.</a></p>
-    </div>
-  </footer>
 
     <!-- Google Prettify -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
