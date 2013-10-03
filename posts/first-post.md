@@ -41,7 +41,7 @@ And open [http://localhost:9292](http://localhost:9292) in the browser.
 ### Customizing Ruhoh
 The blog theme is the part where I had spent the majority of my time. Coming from the software engineering background, I have a lot to learn from  the front end people. It was only after many attempts at testing and previewing on local machine, I was able to pin down to individual selectors and rules to modify them accordingly. 
 
-The theme that works with Ruhoh out of the box is the popular Twitter Bootstrap. This is what determines the global look of our site. Looking inside `/twitter/styesheets/bootstrap.min.css` can be quite daunting due to the long unwrapped lines. After trying to work with it, I found it was too time consuming if our goal was an entirely different site design. There is a faster way to customize it [online](http://getbootstrap.com/2.3.2/customize.html) without worrying about its nitty-gritty, but I didn't take a plunge into it as I was rather interested in learning CSS from the ground up. It is therefore best to leave the default theme alone unless you plan only for a minor modification.
+The theme that works with Ruhoh out of the box is the popular Twitter Bootstrap. This is what determines the global look of our site. Looking inside `/twitter/styesheets/bootstrap.min.css` can be quite daunting due to the long lines, made better if wrapped. After trying to work with it, I found it was too time consuming if our goal was an entirely different site design. There is a faster way to customize it [online](http://getbootstrap.com/2.3.2/customize.html) without worrying about its nitty-gritty, but I didn't take a plunge into it as I was rather interested in learning CSS from the ground up. It is therefore best to leave the default theme alone unless you plan only for a minor modification.
 
 Instead, we can write a new CSS to override the default CSS while still leaving the task of providing the most basic styling needs to the default bootstrap CSS. Place this new CSS file alongside `bootstrap.min.css`, both of which will be referenced from our HTML page `/twitter/layout/defaults.html`. Check out a few CSS samples that give looks to our liking and use them to help us write this new stylesheet.
 
@@ -202,7 +202,7 @@ widgets:
 		use: mathjax
 ```
 
-- Add to the body of HTML page `/twitter/layouts/default.html`:
+- Append to the body of HTML page `/twitter/layouts/default.html`:
 
 {{# raw_code }}
 {{{ widgets.mathjax }}}
