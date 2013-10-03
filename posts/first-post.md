@@ -105,7 +105,7 @@ Once we are done with the posts, we are ready to publish them. This step basical
 	$ echo ".DS_Store" >> .gitignore
 
 	# On Mac OS, there is this extra hidden file .DS_Store we would like to exclude
-	$ find . _name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+	$ find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
 
 	$ git add .
 
