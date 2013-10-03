@@ -5,12 +5,16 @@ description:
 
 {{# posts.paginator }}
 <div class="post">
-  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
+  <h3 class="title"><a href="{{url}}">{{title}}</a> </h3>
 
   {{{ summary }}}
 
   <div class="more">
     <a href="{{url}}" class="btn btn-small">read more..</a>
+  </div>
+
+  <div class="showdate">
+    <h3>Posted on {{ date }}</h3>
   </div>
 </div>
 {{/ posts.paginator }}
