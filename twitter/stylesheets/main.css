@@ -61,7 +61,7 @@ a:hover,a:focus{color:#CD5555;border-bottom:1px solid #CD5555;-webkit-transition
 
 
 @media only screen and (max-width:959px){}
-@media only screen and (min-width:768px) and (max-width:959px){#site_footer .social_links{padding:0;font-size:28px;} #sidebar h1{font-size:20px;}}
+@media only screen and (min-width:768px) and (max-width:959px){#sidebar h1{font-size:20px;}}
 @media only screen and (max-width:767px){}
 
 @media only screen and (min-width:480px) and (max-width:767px){.hidetoggle{display:none;overflow:hidden;}  
