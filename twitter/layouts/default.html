@@ -43,11 +43,10 @@
 
 	<!-- Primary Page Layout
 	================================================== -->
-<div class="container">
   <header id="site_header">
   </header>
 
-	
+<div class="container">	
   <!-- Delete everything in this .container and get started on your own site! -->
     <div id="sidebar" class="four columns alpha">
       <h1><a href="{{urls.base_path}}">{{ data.title }}</a></h1>
@@ -58,12 +57,13 @@
           </nav>
     </div>
 		
-    <div id="content" class="twelve columns omega">			
+    <div id="content" class="eleven columns offset-by-one">			
       {{{ content }}}
 		</div>
-
+</div><!-- container -->
 
 <div id="site_footer">
+<div class="container">
   <div class="five columns alpha">
     <h5>powered by <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
       and <a href="http://pages.github.com/" target="_blank" title="Github Pages">Github Pages</a></h5>
@@ -79,9 +79,8 @@
        	<li><a href="/posts/rss.xml" target="_blank" class="ss-rss"><span class="tooltip">RSS</span></a></li>
       </ul>
   </div>
-</div>
-
-</div><!--container-->
+</div><!-- container -->
+</div><!-- footer -->
 
 
     {{{ widgets.google_prettify }}}
