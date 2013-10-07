@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Jennifer Lee</title>
+    <description>Jennifer Lee</description>
+    <link>http://estimate.github.io/</link>
+    <pubDate>2013-10-06</pubDate>
+    <item>
+      <title>About Me</title>
+      <link>http://estimate.github.io//about</link>
+      <description>&lt;p&gt;All about me =)&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Archive</title>
+      <link>http://estimate.github.io//archive</link>
+      <description>  &lt;h2&gt;2013&lt;/h2&gt;
+    &lt;h3&gt;June&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;span&gt;2013-06-15&lt;/span&gt; &amp;raquo; &lt;a href="/posts/blogging-with-ruhoh"&gt;Blogging with Ruhoh&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+</description>
+    </item>
+    <item>
+      <title>Categories</title>
+      <link>http://estimate.github.io//categories</link>
+      <description>&lt;ul class="tag_box inline"&gt;
+  &lt;li&gt;
+    &lt;a href="/categories#software-ref"&gt;software &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;h3&gt;software (1)&lt;/h3&gt;
+  &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/posts/blogging-with-ruhoh"&gt;Blogging with Ruhoh&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Home</title>
+      <link>http://estimate.github.io//</link>
+      <description>&lt;div class="post"&gt;
+  &lt;h3 class="title"&gt;&lt;a href="/posts/blogging-with-ruhoh"&gt;Blogging with Ruhoh&lt;/a&gt; &lt;/h3&gt;
+
+  &lt;div class="summary ellipsis"&gt;
+&lt;p&gt;It has been three years since I started &lt;a href="http://lessvariance.herokuapp.com/"&gt;my first static blog&lt;/a&gt;. My apology for the lack of postings. It has been a long difficult journey with no sight of the tide turning. I can only say that I failed to get my priorities straight. As the &lt;code&gt;ruhoh&lt;/code&gt; blogging platform is very similar to &lt;code&gt;jekyll&lt;/code&gt;, I decided to give it a try. I'm also fond of using &lt;code&gt;markdown&lt;/code&gt; formatted text given its flexibility, and static blogs generally support that. From now on, I'm going to start fresh here.&lt;/p&gt;
+
+&lt;p&gt;Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent &lt;a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html"&gt;writeup&lt;/a&gt;. Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.&lt;/p&gt;
+
+&lt;p&gt;To get started, clone the blog scaffold from this &lt;a href="https://github.com/ruhoh/blog"&gt;github repository&lt;/a&gt;. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git://github.com/ruhoh/blog.git blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To enable adding our own contents later on, we'll need to remove the reference to the Ruhoh origin before pointing it to our own. Assuming we have already set up a github repository with &lt;code&gt;USERNAME/ruhoh-blog.git&lt;/code&gt;, and the blog directory on the local machine has its name set to &lt;code&gt;username.github.io&lt;/code&gt;, we do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote rm origin
+
+$ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure we have at least &lt;code&gt;ruby 1.9.2+&lt;/code&gt; and check if bundler exists: &lt;code&gt;$ bundle -v&lt;/code&gt;. Bundler is used to manage different versions of Ruhoh. If the bundler is not found, install it using &lt;code&gt;$ gem install bundler&lt;/code&gt;. Inside the working blog directory, install the Ruhoh gem using bundler. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+  &lt;div class="more"&gt;
+    &lt;a href="/posts/blogging-with-ruhoh" class="btn btn-small"&gt;read more..&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class="showdate"&gt;
+    &lt;h3&gt;Posted on 2013-06-15&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+      &lt;li class="active"&gt;&lt;a href="/"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Pages</title>
+      <link>http://estimate.github.io//pages</link>
+      <description>&lt;ul&gt;
+  
+    &lt;li&gt;&lt;a href="/about"&gt;About Me&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+  
+  
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  
+    &lt;li class="active"&gt;&lt;a href="/pages" class="active"&gt;Pages&lt;/a&gt;&lt;/li&gt;
+  
+  
+  
+    &lt;li&gt;&lt;a href="/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Tags</title>
+      <link>http://estimate.github.io//tags</link>
+      <description>&lt;ul class="tag_box inline"&gt;
+  &lt;li&gt;
+    &lt;a href="/tags#blog-ref"&gt;blog &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="/tags#ruhoh-ref"&gt;ruhoh &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;h3 id="blog-ref"&gt;blog&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/posts/blogging-with-ruhoh"&gt;Blogging with Ruhoh&lt;/a&gt;&lt;/li&gt;
+  &lt;h3 id="ruhoh-ref"&gt;ruhoh&lt;/h3&gt;
+    &lt;li&gt;&lt;a href="/posts/blogging-with-ruhoh"&gt;Blogging with Ruhoh&lt;/a&gt;&lt;/li&gt;
+ 
+</description>
+    </item>
+  </channel>
+</rss>
