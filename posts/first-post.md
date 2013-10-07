@@ -1,6 +1,5 @@
 ---
 title: Blogging with Ruhoh
-description: Updated '2013-09-30'
 date: '2013-06-15'
 tags: ["blog", "ruhoh"]
 categories: software
