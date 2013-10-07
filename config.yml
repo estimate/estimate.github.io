@@ -3,12 +3,12 @@
 
 # This helps parsers (and hosting platforms) determine which version is needed to compile your site.
 # If you compile your blog yourself, setting this won't matter, but it's a nice thing to keep updated.
-RuhohSpec: "2.1"
+RuhohSpec: "2.5"
 
 # Used for things like RSS that need the full URL to a given resource.
 # This DOES NOT affect any of your paths or links in any way.
 # This DOES NOT configure domain mapping. See post2.ruhoh.com for hosting options.
-production_url: "http://estimate.github.io"
+production_url: "http://estimate.github.io/"
 
 # Intelligently prepends all urls in the system with the given base_path.
 # This allows you to host your blog in a subdirectory of a given website.
@@ -27,7 +27,7 @@ twitter :
 _root:
   summary_lines: 20
   rss:
-    enable: false
+    enable: true
   paginator:
     enable: false
 
