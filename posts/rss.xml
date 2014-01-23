@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Jennifer Lee</title>
+    <description>Jennifer Lee</description>
+    <link>http://estimate.github.io/</link>
+    <pubDate>2014-01-23</pubDate>
+    <item>
+      <title>Blogging with Ruhoh</title>
+      <link>http://estimate.github.io//posts/blogging-with-ruhoh</link>
+      <pubDate>2013-06-15</pubDate>
+      <description>&lt;p&gt;It has been three years since I started &lt;a href="http://lessvariance.herokuapp.com/"&gt;my first static blog&lt;/a&gt;. As the &lt;code&gt;ruhoh&lt;/code&gt; blogging platform is very similar to &lt;code&gt;jekyll&lt;/code&gt;, I decided to give it a try. I&amp;#39;m also fond of using &lt;code&gt;markdown&lt;/code&gt; formatted text given its flexibility, and static blogs generally support that. From now on, I&amp;#39;m going to start fresh here.&lt;/p&gt;
+
+&lt;p&gt;Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent &lt;a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html"&gt;guide&lt;/a&gt;. Although there is no need to repeat anything here, I&amp;#39;d love to be able to understand the process better and document some essential workflow here for my future reference.&lt;/p&gt;
+
+&lt;p&gt;To get started, clone the blog scaffold from this &lt;a href="https://github.com/ruhoh/blog"&gt;github repository&lt;/a&gt;. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git://github.com/ruhoh/blog.git blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To enable adding our own contents later on, we&amp;#39;ll need to remove the reference to the Ruhoh origin before pointing it to our own. Assuming we have already set up a github repository with &lt;code&gt;USERNAME/ruhoh-blog.git&lt;/code&gt;, and the blog directory on the local machine has its name set to &lt;code&gt;username.github.io&lt;/code&gt;, we do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote rm origin
+
+$ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure we have at least &lt;code&gt;ruby 1.9.2+&lt;/code&gt; and check if bundler exists: &lt;code&gt;$ bundle -v&lt;/code&gt;. Bundler is used to manage different versions of Ruhoh. If the bundler is not found, install it using &lt;code&gt;$ gem install bundler&lt;/code&gt;. Inside the working blog directory, install the Ruhoh gem using bundler. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the bundle is installed, we may run the blog in &lt;em&gt;preview&lt;/em&gt; mode. Run in the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle exec rackup -p 9292
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And open &lt;a href="http://localhost:9292"&gt;http://localhost:9292&lt;/a&gt; in the browser. &lt;/p&gt;
+
+&lt;h3 id="toc_0"&gt;Customizing Ruhoh&lt;/h3&gt;
+
+&lt;p&gt;The blog theme is the part where I had spent the majority of my time. Coming from the software engineering background, I have a lot to learn from  the front end people. It was only after many attempts at testing and previewing on local machine, I was able to pin down to individual selectors and rules to modify them accordingly. &lt;/p&gt;
+
+&lt;p&gt;The theme that works with Ruhoh out of the box is the popular Twitter Bootstrap. This is what determines the global look of our site. Looking inside &lt;code&gt;/twitter/styesheets/bootstrap.min.css&lt;/code&gt; can be quite daunting due to the long lines, made better if wrapped. After trying to work with it, I found it was too time consuming if our goal was an entirely different site design. There is a faster way to customize it &lt;a href="http://getbootstrap.com/2.3.2/customize.html"&gt;online&lt;/a&gt; without worrying about its nitty-gritty, but I didn&amp;#39;t take a plunge into it as I was rather interested in learning CSS from the ground up. It is therefore best to leave the default theme alone unless you plan only for a minor modification.&lt;/p&gt;
+
+&lt;p&gt;Instead, we can write a new CSS to override the default CSS while still leaving the task of providing the most basic styling needs to the default bootstrap CSS. Place this new CSS file alongside &lt;code&gt;bootstrap.min.css&lt;/code&gt;, both of which will be referenced from our HTML page &lt;code&gt;/twitter/layout/defaults.html&lt;/code&gt;. Check out a few CSS samples that give looks to our liking and use them to help us write this new stylesheet.&lt;/p&gt;
+
+&lt;p&gt;The given &lt;code&gt;/twitter/stylesheets/style.css&lt;/code&gt; is where we customize post-specific CSS. It includes styling for the post title, date, and tags.&lt;/p&gt;
+
+&lt;p&gt;To facilitate proper display and resize on any mobile devices, &lt;a href="http://www.getskeleton.com/"&gt;Skeleton&lt;/a&gt; provides a set of CSS files for responsive design. The grid system helps to create a layout with any number of columns we choose.&lt;/p&gt;
+
+&lt;p&gt;There are two &lt;code&gt;.yml&lt;/code&gt; files which are &lt;a href="http://en.wikipedia.org/wiki/YAML"&gt;YAML&lt;/a&gt; documents. These configuration files can be edited to include any user-specific data for putting together a unique blog.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;config.yml&lt;/code&gt; let us specify the production url, blog theme, format of post permalink, and paginator preference. It is recommended that we set the post permalink to &lt;code&gt;/posts/:title/&lt;/code&gt; in case we break it when we have to change post categories. Widgets such as google analytics and disqus comments can be referenced in this file so that we don&amp;#39;t have to hardcode the snippets directly to the default HTML blog layout. This is good for modularity.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data.yml&lt;/code&gt; let us set the title of our blog, tagline (if there is one), as well as author properties. Furthermore, we can specify which pages to display on the top or sidebar navigation.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_1"&gt;Creating Blog Posts&lt;/h3&gt;
+
+&lt;p&gt;We can create a new post with Ruhoh by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle exec ruhoh posts new &amp;quot;Another Post&amp;quot;
+
+Using theme: &amp;quot;twitter&amp;quot;
+New posts:
+    &amp;gt; posts/another-post.md
+
+# Bring up the Sublime editor to start writing post
+$ subl posts/another-post.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that every post has the same template with the top metadata included.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title: Blogging with Ruhoh
+description: 
+date: &amp;#39;2013-06-15&amp;#39;
+tags: [&amp;quot;blog&amp;quot;, &amp;quot;productivity&amp;quot;]
+categories: software
+---
+
+... Type away ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Drafts are not compiled by Ruhoh to be included to production website. They are created under &lt;code&gt;/posts&lt;/code&gt; directory. To publish a draft, simply move it from the draft folder to the upper level /posts directory. To create a draft post with title: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ruhoh posts draft &amp;quot;Draft Title&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="toc_2"&gt;Deploying on Github Pages&lt;/h3&gt;
+
+&lt;p&gt;Once we are done with the posts, we are ready to publish them. This step basically consists of pushing the compiled blog to Github for blog hosting, and pushing the blog files like we usually do with any other repository. I&amp;#39;m using the free Github Pages to host this blog. There are other options like Heroku which I&amp;#39;ve used before, and Amazon S3. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# If the branch doesn&amp;#39;t exist, run this one-time command to create a new branch with the name blog: $ git checkout -b blog.
+# Otherwise, just check out to the blog branch since we need to compile the blog from here
+$ git checkout blog
+
+# Compile the blog in production mode. This creates a new compiled/ folder inside our working blog directory
+$ bundle exec ruhoh compile
+
+# Exclude the compiled folder and lock files
+$ echo &amp;quot;compiled&amp;quot; &amp;gt;&amp;gt; .gitignore
+
+$ echo &amp;quot;*.lock&amp;quot; &amp;gt;&amp;gt; .gitignore
+
+$ echo &amp;quot;.DS_Store&amp;quot; &amp;gt;&amp;gt; .gitignore
+
+# On Mac OS, there is this extra hidden file .DS_Store we would like to exclude
+$ find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+
+$ git add .
+
+$ git commit -m &amp;#39;message&amp;#39;
+
+# Make sure everything has been added and commited before switching branch
+$ git status
+
+# Now, we are ready to push the compiled blog
+$ git checkout master
+
+# Copy files under compiled/ to the top directory
+$ rsync -a compiled/ ./
+
+# Remove compiled/ dir
+$ rm -rf compiled/
+
+$ git add .
+
+$ git commit -m &amp;#39;message&amp;#39;
+
+$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that the blog &lt;code&gt;username.github.io&lt;/code&gt; has two branches: master and blog. We have already pushed the compiled blog to the &lt;code&gt;master&lt;/code&gt; branch. Now, we are going to push the blog files to the &lt;code&gt;blog&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git checkout blog
+
+$ git add .
+
+$ git commit -m &amp;#39;message&amp;#39;
+
+$ git push origin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="toc_3"&gt;Ruhoh Update&lt;/h3&gt;
+
+&lt;p&gt;With periodical updates to Ruhoh about once every few months, we may want to get the latest Ruhoh gem. &lt;em&gt;As of September 30, 2013&lt;/em&gt;, I have updated Ruhoh from version 2.1 to 2.5. All we have to do are to update the Gemfile and install the bundle.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ruhoh-blog
+
+$ touch Gemfile
+
+$ echo &amp;quot;source \&amp;quot;https://rubygems.org\&amp;quot;&amp;quot; &amp;gt;&amp;gt; Gemfile
+
+$ echo &amp;quot;gem &amp;#39;ruhoh&amp;#39;, \&amp;quot;~&amp;gt; 2\&amp;quot;&amp;quot; &amp;gt;&amp;gt; Gemfile
+
+$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There was concern of breaking things when updating, but they were minor trifles. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Ruhoh compiler threw errors regarding the webfonts that I use for social icons from &lt;a href="http://symbolset.com/"&gt;Symbolset&lt;/a&gt;. Prior to the update, it was working fine when the fonts folder was placed as &lt;code&gt;/twitter/fonts/....&lt;/code&gt;, at the same level as the stylesheets folder. I received this following error message after update to 2.5:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;Jennifers-MacBook-Pro:estimate.github.io leecarrot$ bundle exec ruhoh server 9292
+Using theme: &amp;quot;twitter&amp;quot;
+/usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/gems/1.9.1/gems/ruhoh-2.5/lib/ruhoh/parse.rb:37:in `gsub&amp;#39;: invalid byte sequence in UTF-8 (ArgumentError)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to &lt;code&gt;/twitter/media/...&lt;/code&gt; -- referencing it from the default HTML page by &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/assets/media/ss-social-regular.css&amp;quot;&amp;gt;&lt;/code&gt;. In fact, the compiler interpretes this directory structure as &lt;code&gt;/assets/media/font-name....&lt;/code&gt; upon compilation. I&amp;#39;m still puzzled on why the new version doesn&amp;#39;t like &lt;code&gt;/twitter/fonts/font-name...&lt;/code&gt; since this will translate to &lt;code&gt;assets/fonts/font-name...&lt;/code&gt; which has worked before in the previous version.&lt;/p&gt;
+
+&lt;h3 id="toc_4"&gt;LaTeX with Mathjax&lt;/h3&gt;
+
+&lt;p&gt;It&amp;#39;s often the case that we would like to write LaTeX equations and have them rendered properly in browsers. The Mathjax widget provides this functionality. The previous &lt;a href="https://github.com/ruhoh/ruhoh.rb/issues/46#issuecomment-6988308"&gt;installation guide&lt;/a&gt; helps tremendously, however, it only works with the older versions of Ruhoh. To get Mathjax to work with Ruhoh 2.5, I find it helpful to understand about how widgets work from the current Ruhoh &lt;a href="http://ruhoh.com/docs/2/widgets/"&gt;documentation&lt;/a&gt;. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Start by creating folders named &lt;code&gt;widgets&lt;/code&gt; and &lt;code&gt;mathjax&lt;/code&gt; such that it has the following structure: &lt;code&gt;/twitter/widgets/mathjax/....&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a new HTML file under mathjax folder &lt;code&gt;/twitter/widgets/mathjax/mathjax.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;To obtain secure access to Mathjax Content Delivery Network (CDN), define the following snippet in mathjax.html:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- INSERT MATHJAX CONFIGURATION FROM MATH.STACKEXCHANGE --&amp;gt;
+&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;
+MathJax.Hub.Config({
+  jax: [&amp;quot;input/TeX&amp;quot;, &amp;quot;output/HTML-CSS&amp;quot;],
+  tex2jax: {
+    inlineMath: [ [&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;] ],
+    displayMath: [ [&amp;#39;$$&amp;#39;, &amp;#39;$$&amp;#39;]],
+    processEscapes: true,
+    skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;, &amp;#39;code&amp;#39;]
+  },
+  messageStyle: &amp;quot;none&amp;quot;,
+  &amp;quot;HTML-CSS&amp;quot;: { preferredFont: &amp;quot;TeX&amp;quot;, availableFonts: [&amp;quot;STIX&amp;quot;,&amp;quot;TeX&amp;quot;] }
+});
+&amp;lt;/script&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;
+src=&amp;quot;https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;quot;&amp;gt;
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Refer to the Mathjax widget in &lt;code&gt;config.yml&lt;/code&gt;. The &lt;code&gt;use&lt;/code&gt; configuration setting tells the Mathjax widget to use the snippet in mathjax.html.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;widgets:
+    mathjax:
+        use: mathjax
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Append to the body of HTML page &lt;code&gt;/twitter/layouts/default.html&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;#123;&amp;#123; widgets.mathjax &amp;#125;&amp;#125;&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+  
+</description>
+    </item>
+  </channel>
+</rss>
