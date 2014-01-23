@@ -4,27 +4,14 @@
     <title>Jennifer Lee</title>
     <description>Jennifer Lee</description>
     <link>http://estimate.github.io/</link>
-    <pubDate>2013-10-15</pubDate>
-    <item>
-      <title>Test latex2html5</title>
-      <link>http://estimate.github.io//posts/test-latex2html5</link>
-      <pubDate>2013-10-14</pubDate>
-      <description>&lt;p&gt;This project is the frontend only version of the code that originated from &lt;a href="http://www.mathapedia.com/" target="youlovemathdontyou"&gt;Mathapedia&lt;/a&gt; to enable real-time, dynamic authorship of mathematical ebooks.&lt;/p&gt;
-
-&lt;p&gt;$$\frac{\delta}{\delta u} \int_{birth}^{death} f(life) du = \mbox{your life}$$&lt;/p&gt;
-
-&lt;p&gt;Check out the examples below or view source to get started.&lt;/p&gt;
-
-&lt;!-- begin demo --&gt;
-</description>
-    </item>
+    <pubDate>2014-01-23</pubDate>
     <item>
       <title>Blogging with Ruhoh</title>
       <link>http://estimate.github.io//posts/blogging-with-ruhoh</link>
       <pubDate>2013-06-15</pubDate>
-      <description>&lt;p&gt;It has been three years since I started &lt;a href="http://lessvariance.herokuapp.com/"&gt;my first static blog&lt;/a&gt;. My apology for the lack of postings. It has been a long difficult journey with no sight of the tide turning. I can only say that I failed to get my priorities straight. As the &lt;code&gt;ruhoh&lt;/code&gt; blogging platform is very similar to &lt;code&gt;jekyll&lt;/code&gt;, I decided to give it a try. I&amp;#39;m also fond of using &lt;code&gt;markdown&lt;/code&gt; formatted text given its flexibility, and static blogs generally support that. From now on, I&amp;#39;m going to start fresh here.&lt;/p&gt;
+      <description>&lt;p&gt;It has been three years since I started &lt;a href="http://lessvariance.herokuapp.com/"&gt;my first static blog&lt;/a&gt;. As the &lt;code&gt;ruhoh&lt;/code&gt; blogging platform is very similar to &lt;code&gt;jekyll&lt;/code&gt;, I decided to give it a try. I&amp;#39;m also fond of using &lt;code&gt;markdown&lt;/code&gt; formatted text given its flexibility, and static blogs generally support that. From now on, I&amp;#39;m going to start fresh here.&lt;/p&gt;
 
-&lt;p&gt;Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent &lt;a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html"&gt;writeup&lt;/a&gt;. Although there is no need to repeat anything here, I&amp;#39;d love to be able to understand the process better and document some essential workflow here for my future reference.&lt;/p&gt;
+&lt;p&gt;Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent &lt;a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html"&gt;guide&lt;/a&gt;. Although there is no need to repeat anything here, I&amp;#39;d love to be able to understand the process better and document some essential workflow here for my future reference.&lt;/p&gt;
 
 &lt;p&gt;To get started, clone the blog scaffold from this &lt;a href="https://github.com/ruhoh/blog"&gt;github repository&lt;/a&gt;. &lt;/p&gt;
 
