@@ -6,7 +6,6 @@
 
 body{color:#6d717d;font-size:18px;line-height:1.8;font-family:'Palatino', 'Open Sans', sans-serif;font-weight:400;background-color:#FFF;-webkit-text-size-adjust:auto;}::selection{background:#8adde5}::-moz-selection{background:#8adde5}
 
-
 h1,h2,h3,h4,h5,h6{color:#514168;font-family:"museo-slab",'Verdana','Arial',serif;font-weight:300;font-weight:normal;}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a:visited{font-weight:inherit;border:none;}
 h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,h1 a:focus,h2 a:focus,h3 a:focus,h4 a:focus,h5 a:focus,h6 a:focus{font-weight:inherit;border:none;}
@@ -39,7 +38,7 @@ a:hover,a:focus{color:#CD5555;border-bottom:1px solid #CD5555;-webkit-transition
 #content{margin-top:10px; margin-bottom:40px;}
 
 
-#site_footer{border-top:10px solid #F0FFFF;font-family:"museo-slab",'Verdana','Arial',sans-serif;font-style:normal;font-weight:300;background-color:#8B8386;margin-top:20px;}
+#site_footer{border-top:10px solid #F0FFFF;font-family:"museo-slab",'Verdana','Arial',sans-serif;font-style:normal;font-weight:200;background-color:#8B8386;margin-top:20px;}
 
 #site_footer a{color:#F0FFFF;text-decoration:none;border:none;}
 
@@ -61,9 +60,11 @@ a:hover,a:focus{color:#CD5555;border-bottom:1px solid #CD5555;-webkit-transition
 
 
 @media only screen and (max-width:959px){}
+/* Tablet (Portrait) */
 @media only screen and (min-width:768px) and (max-width:959px){#sidebar h1{font-size:20px;}}
 @media only screen and (max-width:767px){}
 
+/* Note: Design for mobile (Landscape) 
 @media only screen and (min-width:480px) and (max-width:767px){.hidetoggle{display:none;overflow:hidden;}  
 	#sidebar h1{font-size:20px;margin-left:10px;text-align:center}
 	#sidebar nav ul{margin:0 0 20px 0;padding:0;font-size:32px;}
@@ -98,4 +99,4 @@ a:hover,a:focus{color:#CD5555;border-bottom:1px solid #CD5555;-webkit-transition
 	#site_footer br{display:none}
 	#site_footer .social_links{float:none;margin-bottom:20px}
 	#site_footer{font-size:0.85em}
-}
+}*/

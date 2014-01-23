@@ -4,7 +4,20 @@
     <title>Jennifer Lee</title>
     <description>Jennifer Lee</description>
     <link>http://estimate.github.io/</link>
-    <pubDate>2013-10-06</pubDate>
+    <pubDate>2013-10-15</pubDate>
+    <item>
+      <title>Test latex2html5</title>
+      <link>http://estimate.github.io//posts/test-latex2html5</link>
+      <pubDate>2013-10-14</pubDate>
+      <description>&lt;p&gt;This project is the frontend only version of the code that originated from &lt;a href="http://www.mathapedia.com/" target="youlovemathdontyou"&gt;Mathapedia&lt;/a&gt; to enable real-time, dynamic authorship of mathematical ebooks.&lt;/p&gt;
+
+&lt;p&gt;$$\frac{\delta}{\delta u} \int_{birth}^{death} f(life) du = \mbox{your life}$$&lt;/p&gt;
+
+&lt;p&gt;Check out the examples below or view source to get started.&lt;/p&gt;
+
+&lt;!-- begin demo --&gt;
+</description>
+    </item>
     <item>
       <title>Blogging with Ruhoh</title>
       <link>http://estimate.github.io//posts/blogging-with-ruhoh</link>
