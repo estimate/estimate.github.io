@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Home</title>
+  <meta name="author" content="Jennifer Lee">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+<link href='/assets/stylesheets/bootstrap.min-a650b6cd0753c8655fc0eb4d5844fcdf.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/style-0857d75112ac1f59a60495988a2b5fdf.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/main-bd53e9a5d798ae08a12413769b0763c0.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/assets/stylesheets/skeleton-92d82888994cb6fa48364c88b72d725a.css' type='text/css' rel='stylesheet' media='all'>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== 
+  <!-- Le fav and touch icons -->
+  <!-- Update these with your own images-->
+  <link rel="stylesheet" href="/assets/media/ss-social-regular.css">
+
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+  <header id="site_header">
+  </header>
+
+<div class="container">	
+  <!-- Delete everything in this .container and get started on your own site! -->
+    <div id="sidebar" class="four columns alpha">
+      <h1><a href="/">Jennifer Lee</a></h1>
+          <nav>
+              
+                <li><a href="/archive">Archive</a></li>
+              
+              
+                <li><a href="/tags">Tags</a></li>
+              
+              
+                <li><a href="/categories">Categories</a></li>
+              
+          </nav>
+    </div>
+		
+    <div id="content" class="twelve columns omega">			
+      <div class="page-header">
+  <h1>Home </h1>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="post">
+  <h3 class="title"><a href="/posts/test-latex2html5">Test latex2html5</a> </h3>
+
+  <div class="summary">
+<p>This project is the frontend only version of the code that originated from <a href="http://www.mathapedia.com/" target="youlovemathdontyou">Mathapedia</a> to enable real-time, dynamic authorship of mathematical ebooks.</p>
+
+<p>$$\frac{\delta}{\delta u} \int_{birth}^{death} f(life) du = \mbox{your life}$$</p>
+
+<p>Check out the examples below or view source to get started.</p>
+
+<!-- begin demo -->
+</div>
+
+  <div class="more">
+    <a href="/posts/test-latex2html5" class="btn btn-small">read more..</a>
+  </div>
+
+  <div class="showdate">
+    <h3>Posted on 2013-10-14</h3>
+  </div>
+</div>
+<div class="post">
+  <h3 class="title"><a href="/posts/blogging-with-ruhoh">Blogging with Ruhoh</a> </h3>
+
+  <div class="summary ellipsis">
+<p>It has been three years since I started <a href="http://lessvariance.herokuapp.com/">my first static blog</a>. My apology for the lack of postings. It has been a long difficult journey with no sight of the tide turning. I can only say that I failed to get my priorities straight. As the <code>ruhoh</code> blogging platform is very similar to <code>jekyll</code>, I decided to give it a try. I'm also fond of using <code>markdown</code> formatted text given its flexibility, and static blogs generally support that. From now on, I'm going to start fresh here.</p>
+
+<p>Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent <a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html">writeup</a>. Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.</p>
+
+<p>To get started, clone the blog scaffold from this <a href="https://github.com/ruhoh/blog">github repository</a>. </p>
+
+<pre><code>$ git clone git://github.com/ruhoh/blog.git blog
+</code></pre>
+
+<p>To enable adding our own contents later on, we'll need to remove the reference to the Ruhoh origin before pointing it to our own. Assuming we have already set up a github repository with <code>USERNAME/ruhoh-blog.git</code>, and the blog directory on the local machine has its name set to <code>username.github.io</code>, we do:</p>
+
+<pre><code>$ git remote rm origin
+
+$ git remote add origin git@github.com:USERNAME/ruhoh-blog.git
+</code></pre>
+
+<p>Make sure we have at least <code>ruby 1.9.2+</code> and check if bundler exists: <code>$ bundle -v</code>. Bundler is used to manage different versions of Ruhoh. If the bundler is not found, install it using <code>$ gem install bundler</code>. Inside the working blog directory, install the Ruhoh gem using bundler. </p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+</div>
+
+  <div class="more">
+    <a href="/posts/blogging-with-ruhoh" class="btn btn-small">read more..</a>
+  </div>
+
+  <div class="showdate">
+    <h3>Posted on 2013-06-15</h3>
+  </div>
+</div>
+
+<div class="pagination">
+  <ul>
+      <li class="active"><a href="/">1</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+
+		</div>
+</div><!-- container -->
+
+<div id="site_footer">
+<div class="container">
+  <div class="five columns alpha">
+    <h5>powered by <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">Ruhoh </a>
+      and <a href="http://pages.github.com/" target="_blank" title="Github Pages">Github Pages</a></h5>
+  </div>
+
+	<div class="eleven columns omega">
+      <ul class="social_links">
+        <li><a href="http://twitter.com/jliyi" target="_blank" class="ss-twitter"><span class="tooltip">Twitter</span></a></li>
+        <li><a href="http://gaussianmixture.tumblr.com" target="_blank" class="ss-tumblr"><span class="tooltip">Tumblr</span></a></li>
+        <li><a href="https://github.com/estimate/estimate.github.io/tree/blog" target="_blank" class="ss-octocat"><span class="tooltip">Fork</span></a></li>
+        <li><a href="https://plus.google.com/105832633459216628536/about?partnerid=gplp0" target="_blank" class="ss-googleplus"><span class="tooltip">Google, Gmail</span></a></li>
+        <li><a href="mailto:jennifer_io@yahoo.com" target="_blank" class="ss-mail"><span class="tooltip">Contact</span></a></li>
+       	<li><a href="/posts/rss.xml" target="_blank" class="ss-rss"><span class="tooltip">RSS</span></a></li>
+      </ul>
+  </div>
+</div><!-- container -->
+</div><!-- footer -->
+
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12066804-7']);
+  _gaq.push(['_trackPageview']);
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+    <!-- INSERT MATHJAX CONFIGURATION FROM MATH.STACKEXCHANGE -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script type="text/javascript"
+src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+    <script type="text/javascript" src="/assets/media/latex2html5.min.js"></script> 
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
