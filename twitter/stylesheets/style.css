@@ -28,10 +28,11 @@
   color: #999999;
   font-size: .7em;
   text-align: right;
+  margin-bottom:50px;
 }
 
 .post > .more {
-  margin:10px 0 40px;
+  margin:10px 0 0;
   text-align:left;
   font-family:"HelveticaNeue-Light";
   font-size:25px;

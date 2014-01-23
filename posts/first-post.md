@@ -4,9 +4,9 @@ date: '2013-06-15'
 tags: ["blog", "ruhoh"]
 categories: software
 ---
-It has been three years since I started [my first static blog](http://lessvariance.herokuapp.com/). My apology for the lack of postings. It has been a long difficult journey with no sight of the tide turning. I can only say that I failed to get my priorities straight. As the `ruhoh` blogging platform is very similar to `jekyll`, I decided to give it a try. I'm also fond of using `markdown` formatted text given its flexibility, and static blogs generally support that. From now on, I'm going to start fresh here.
+It has been three years since I started [my first static blog](http://lessvariance.herokuapp.com/). As the `ruhoh` blogging platform is very similar to `jekyll`, I decided to give it a try. I'm also fond of using `markdown` formatted text given its flexibility, and static blogs generally support that. From now on, I'm going to start fresh here.
 
-Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent [writeup](http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html). Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.
+Ruhoh comes with the core feature sets I need. Its building blocks are well-abstracted. At the time of writing, I was using Ruhoh version 2.1. I have since updated to 2.5. The Ruhoh documentation has been helpful, and I was able to get up to speed thanks to another excellent [guide](http://blog.coolaj86.com/articles/hosting-your-blog-on-ruhoh-com.html). Although there is no need to repeat anything here, I'd love to be able to understand the process better and document some essential workflow here for my future reference.
 
 To get started, clone the blog scaffold from this [github repository](https://github.com/ruhoh/blog). 
 
