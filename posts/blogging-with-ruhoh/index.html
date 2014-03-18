@@ -30,7 +30,8 @@
 	================================================== 
   <!-- Le fav and touch icons -->
   <!-- Update these with your own images-->
-  <link rel="stylesheet" href="/assets/media/ss-social-regular.css">
+  <!--link rel="stylesheet" href="/assets/media/ss-social-regular.css"-->
+  <link rel="stylesheet" href="/assets/fonts/ss-social-regular.css">
 
 </head>
 <body>
@@ -229,7 +230,7 @@ Using theme: &quot;twitter&quot;
 /usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/gems/1.9.1/gems/ruhoh-2.5/lib/ruhoh/parse.rb:37:in `gsub&#39;: invalid byte sequence in UTF-8 (ArgumentError)
 </code></pre>
 
-<p>It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to <code>/twitter/media/...</code> — referencing it from the default HTML page by <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/media/ss-social-regular.css&quot;&gt;</code>. In fact, the compiler interpretes this directory structure as <code>/assets/media/font-name....</code> upon compilation. I&#39;m still puzzled on why the new version doesn&#39;t like <code>/twitter/fonts/font-name...</code> since this will translate to <code>assets/fonts/font-name...</code> which has worked before in the previous version.</p>
+<p>It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to <code>/twitter/media/...font-files...</code> — referencing it from the default HTML page by <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/media/ss-social-regular.css&quot;&gt;</code>. I&#39;m still puzzled on why the new version doesn&#39;t like <code>/twitter/fonts/...font-files...</code> since this will translate to <code>/assets/fonts/ss-social-regular.css</code> which has been able to be interpreted by the compiler in the previous version.</p>
 
 <h3 id="toc_4">LaTeX with Mathjax</h3>
 

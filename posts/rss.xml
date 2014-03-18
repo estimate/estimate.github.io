@@ -4,7 +4,7 @@
     <title>Jennifer Lee</title>
     <description>Jennifer Lee</description>
     <link>http://estimate.github.io/</link>
-    <pubDate>2014-01-23</pubDate>
+    <pubDate>2014-03-18</pubDate>
     <item>
       <title>Blogging with Ruhoh</title>
       <link>http://estimate.github.io//posts/blogging-with-ruhoh</link>
@@ -169,7 +169,7 @@ Using theme: &amp;quot;twitter&amp;quot;
 /usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/gems/1.9.1/gems/ruhoh-2.5/lib/ruhoh/parse.rb:37:in `gsub&amp;#39;: invalid byte sequence in UTF-8 (ArgumentError)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to &lt;code&gt;/twitter/media/...&lt;/code&gt; &#x2014; referencing it from the default HTML page by &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/assets/media/ss-social-regular.css&amp;quot;&amp;gt;&lt;/code&gt;. In fact, the compiler interpretes this directory structure as &lt;code&gt;/assets/media/font-name....&lt;/code&gt; upon compilation. I&amp;#39;m still puzzled on why the new version doesn&amp;#39;t like &lt;code&gt;/twitter/fonts/font-name...&lt;/code&gt; since this will translate to &lt;code&gt;assets/fonts/font-name...&lt;/code&gt; which has worked before in the previous version.&lt;/p&gt;
+&lt;p&gt;It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to &lt;code&gt;/twitter/media/...font-files...&lt;/code&gt; &#x2014; referencing it from the default HTML page by &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/assets/media/ss-social-regular.css&amp;quot;&amp;gt;&lt;/code&gt;. I&amp;#39;m still puzzled on why the new version doesn&amp;#39;t like &lt;code&gt;/twitter/fonts/...font-files...&lt;/code&gt; since this will translate to &lt;code&gt;/assets/fonts/ss-social-regular.css&lt;/code&gt; which has been able to be interpreted by the compiler in the previous version.&lt;/p&gt;
 
 &lt;h3 id="toc_4"&gt;LaTeX with Mathjax&lt;/h3&gt;
 
