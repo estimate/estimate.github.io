@@ -162,7 +162,7 @@ Using theme: "twitter"
 /usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/gems/1.9.1/gems/ruhoh-2.5/lib/ruhoh/parse.rb:37:in `gsub': invalid byte sequence in UTF-8 (ArgumentError)
 ```
 
-It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to `/twitter/media/...` — referencing it from the default HTML page by `<link rel="stylesheet" href="/assets/media/ss-social-regular.css">`. In fact, the compiler interpretes this directory structure as `/assets/media/font-name....` upon compilation. I'm still puzzled on why the new version doesn't like `/twitter/fonts/font-name...` since this will translate to `assets/fonts/font-name...` which has worked before in the previous version.
+It seems to suggest that the placement of the fonts folder is problematic. What I was passing is not a valid UTF-8, hence, the parser failed on the characters encoding. I was able to get the social icons to work by moving all the contents of its fonts folder to `/twitter/media/...font-files...` — referencing it from the default HTML page by `<link rel="stylesheet" href="/assets/media/ss-social-regular.css">`. I'm still puzzled on why the new version doesn't like `/twitter/fonts/...font-files...` since this will translate to `/assets/fonts/ss-social-regular.css` which has been able to be interpreted by the compiler in the previous version.
 
 
 ### LaTeX with Mathjax

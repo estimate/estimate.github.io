@@ -102,3 +102,6 @@ widgets :
 
   mathjax:
     use: mathjax
+
+'fonts':
+  'use': 'ignore'
