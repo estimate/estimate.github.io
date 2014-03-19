@@ -104,4 +104,4 @@ widgets :
     use: mathjax
 
 'fonts':
-  'use': 'ignore'
+  use: ignore
