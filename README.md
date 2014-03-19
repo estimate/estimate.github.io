@@ -1,0 +1,1 @@
+This is the Ruhoh generated site from the [sources](https://github.com/estimate/estimate.github.io/tree/blog) at the blog branch.
